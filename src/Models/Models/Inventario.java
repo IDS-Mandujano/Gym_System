@@ -65,6 +65,7 @@ public class Inventario {
         }
     }
 
+    //AAAAAAAAAA
     public void buscarAparatos() {
     
     }
