@@ -1,6 +1,5 @@
 package Models;
 import java.util.ArrayList;
-import java.util.List;
 import utils.Messages;
 public class Inventario {
     private static Inventario instancia = null;

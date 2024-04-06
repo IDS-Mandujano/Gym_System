@@ -135,8 +135,11 @@ public class Gerente extends Usuario {
                 
                 switch (opc) {
                     case 1:
+                        editarNombre();
+                        
                         break;
                     case 2:
+                        System.out.println("aca es editar apellido");
                         break;
                     case 3:
                         editarMensualidad();
@@ -255,13 +258,50 @@ public class Gerente extends Usuario {
     }
 
     public void editarNombre(){
-    //List<Cliente> listaClientes = Cliente.getListaClientes();
-    
+         Scanner read = new Scanner(System.in);
+    List<Cliente> listaClientes = Cliente.getListaClientes();
+    Messages msm = new Messages();
+    Excepciones exs = new Excepciones();
+    msm.editar();
+    int idCliente = buscarCliente();
+    for(int i = 0;i<listaClientes.size(); i++ ){
+        if (idCliente==listaClientes.get(i).getId()) {
+            System.out.println("¿Desea editar el nombre?");
+            int opc = exs.validarDatoEntrada();
+            while (opc <=0 || opc> 2) {
+                msm.mensageErrorRango();
+                opc = exs.validarDatoEntrada();
+            }
+            if (opc == 1) {
+                 listaClientes.remove(i);
+                System.out.println("ingrese el nuevo nombre");
+                String nuevoNombre = read.nextLine();
+                listaClientes.get(i).setNombre(nuevoNombre);
+                System.out.println("nombre actualizado");
+            }
+            
+        }
 
     }
 
+
+    }
+
+///////////////////////////////////////////////////////////////////////////77
     public void editarApellido(){
-    //List<Cliente> listaClientes = Cliente.getListaClientes();
+    List<Cliente> listaClientes = Cliente.getListaClientes();
+    Messages msm = new Messages();
+    Excepciones exs = new Excepciones();
+    msm.editar();
+    int idCliente = buscarCliente();
+
+    for(int i = 0;i<listaClientes.size(); i++ ){
+        if (idCliente==listaClientes.get(i).getId()) {
+            
+        }
+
+
+    }
 
 
     }

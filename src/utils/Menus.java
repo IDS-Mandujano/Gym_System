@@ -11,7 +11,7 @@ public class Menus {
     public void menuPrincipalGerente(){
         System.out.println(
             "1.- Cliente\n"+
-            "2.-Inventario\n"+
+            "2.- Inventario\n"+
             "3.- Cerrar sesión");
     }
 
