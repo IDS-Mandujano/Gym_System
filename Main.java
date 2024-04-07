@@ -135,11 +135,6 @@ public class Main {
                 break;
         }
     }
-    
-    public static void verMenuAdmin(){
-        Menus menu = new Menus();
-        menu.menuPrincipalGerente();
-    }
 
     public static void verMenuInventario(){
         Messages msm = new Messages();
@@ -157,6 +152,7 @@ public class Main {
                 validarOpcionInventario(opc);
         } while (opc != 6);
     }
+
     public static void validarOpcionInventario(int opc){
         Inventario a = new Inventario();
         Messages msm = new Messages();
@@ -229,5 +225,74 @@ public class Main {
                 verMenuInventario();
                 break;
         }
+    }
+
+    public static void verMenuAdmin(){
+        Menus menu = new Menus();
+        Excepciones exs = new Excepciones();
+        Messages msm = new Messages();
+
+        int opc;
+        do {
+            menu.menuPrincipalAdmin();
+            opc = exs.validarDatoEntrada();
+            while (opc<=0||opc>3) {
+                msm.mensageErrorRango();
+                opc = exs.validarDatoEntrada();
+            }
+            validarOpcionAdmin(opc);
+        } while (opc!=3);
+    }
+
+    public static void validarOpcionAdmin(int opc){
+        Messages msm = new Messages();
+
+        switch (opc) {
+            case 1:
+                msm.separador();
+                verMenuClienteAdmin();
+                msm.separador();
+                break;
+            case 2:
+                msm.separador();
+                verMenuInventarioAdmin();
+                msm.separador();
+                break;
+            case 3:
+                msm.mensajeSalida();
+                break;
+        }
+    }
+
+    public static void verMenuClienteAdmin(){
+        Menus menu = new Menus();
+        Excepciones exs = new Excepciones();
+        Messages msm = new Messages();
+
+        int opc;
+        do{
+            menu.menuClienteAdmin();
+            opc = exs.validarDatoEntrada();
+            while (opc<=0||opc>3) {
+                msm.mensageErrorRango();
+                opc = exs.validarDatoEntrada();
+            }
+        }while(opc!=3);
+    }
+
+    public static void verMenuInventarioAdmin(){
+        Menus menu = new Menus();
+        Excepciones exs = new Excepciones();
+        Messages msm = new Messages();
+
+        int opc;
+        do{
+            menu.menuInventarioAdmin();
+            opc = exs.validarDatoEntrada();
+            while (opc<=0||opc>3) {
+                msm.mensageErrorRango();
+                opc = exs.validarDatoEntrada();
+            }
+        }while(opc!=3);
     }
 }

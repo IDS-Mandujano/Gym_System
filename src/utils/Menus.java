@@ -14,13 +14,6 @@ public class Menus {
             "2.- Inventario\n"+
             "3.- Cerrar sesión");
     }
-
-    public void menuPrincipalAdmin(){
-        System.out.println(
-            "1.- Ver clientes\n"+
-            "2.- Ver inventario\n"+
-            "3.- Cerrar sesión");
-    }
     
     public void menuCliente(){
         System.out.println(
@@ -117,6 +110,30 @@ public class Menus {
             "¿Qué desea eliminar?\n"+
             "1.- Máquinas\n"+
             "2.- Equipo"
+        );
+    }
+
+    public void menuPrincipalAdmin(){
+        System.out.println(
+            "1.- Cliente\n"+
+            "2.- Inventario\n"+
+            "3.- Cerrar sesión");
+    }
+
+    public void menuClienteAdmin(){
+        System.out.println(
+            "¿Que desea realizar?\n"+
+            "1.- Ver clientes existentes.\n"+
+            "2.- Ver cliente por ID.\n"+
+            "3.- Salir.");
+    }
+
+    public void menuInventarioAdmin(){
+        System.out.println(
+            "Que desea realizar?\n"+
+            "1.- Ver inventario existente.\n"+ 
+            "2.- Ver Inventario por tipo de aparatos.\n"+
+            "3.- Salir"
         );
     }
 }
