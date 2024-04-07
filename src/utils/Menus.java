@@ -17,9 +17,9 @@ public class Menus {
 
     public void menuPrincipalAdmin(){
         System.out.println(
-            "1.- Ver clientes"+
-            "\n2.- Ver inventario"+
-            "\n3.- Cerrar sesión");
+            "1.- Ver clientes\n"+
+            "2.- Ver inventario\n"+
+            "3.- Cerrar sesión");
     }
     
     public void menuCliente(){
@@ -42,81 +42,81 @@ public class Menus {
     }
     public void menuInventario(){
         System.out.println(
-            "1.-Agregar aparatos al inventario\n"+
-            "2.-Ver Inventario por tipo de aparatos.\n"+
-            "3.-Ver inventario existente\n"+
-            "4.-Editar inventario\n"+
-            "5.-Eliminar Aparatos\n"+
-            "6.-Salir\n"
+            "1.- Agregar aparatos al inventario\n"+
+            "2.- Ver Inventario por tipo de aparatos.\n"+
+            "3.- Ver inventario existente\n"+
+            "4.- Editar inventario\n"+
+            "5.- Eliminar Aparatos\n"+
+            "6.- Salir"
         );
     }
     public void menuAgregarAparatos(){
         System.out.println(
-            "1.-Agregar Máquinas\n"+
-            "2.-Agregar Equipo\n"+
-            "3.-Salir"
+            "1.- Agregar Máquinas\n"+
+            "2.- Agregar Equipo\n"+
+            "3.- Salir"
         );
     }
 
     public void menuMaquinas(){
         System.out.println("Tipo de maquina:\n" +
-                    "1.-Máquina de Cardio\n" +
-                    "2.-Máquina de Piernas\n" +
-                    "3.-Máquina de Brazos\n" +
-                    "4.-Máquina de Espalda\n" +
-                    "5.-Máquina de Hombros\n" +
-                    "6.-Máquina de Abdominales\n" +
-                    "7.-Máquina de pecho"
+                    "1.- Máquina de Cardio\n" +
+                    "2.- Máquina de Piernas\n" +
+                    "3.- Máquina de Brazos\n" +
+                    "4.- Máquina de Espalda\n" +
+                    "5.- Máquina de Hombros\n" +
+                    "6.- Máquina de Abdominales\n" +
+                    "7.- Máquina de pecho"
             );
     }
 
     public void statusInventario(){
         System.out.print("Ingrese su Estatus :\n" +
-                "1.-FUNCIONA\n" +
-                "2.-NO FUNCIONA\n");
+                "1.- FUNCIONA\n" +
+                "2.- NO FUNCIONA\n");
     }
 
     public void menuEquipo(){
         System.out.println("Ingrese la seccion de Equipo:\n" +
-                    "1.-Mancuerna\n" +
-                    "2.-Disco\n" +
-                    "3.-Barra"
+                    "1.- Mancuerna\n" +
+                    "2.- Disco\n" +
+                    "3.- Barra"
             );
     }
 
     public void menuBusquedaAparato(){
         System.out.println(
-            "Ingrese el tipo de aparato a buscar\n"+
-            "1.-Maquina\n"+
-            "2.-Equipo"
+            "Ingrese el tipo de aparato a buscar:\n"+
+            "1.- Maquina\n"+
+            "2.- Equipo\n"
         );
     }
     public void menuEditarAparato(){
         System.out.println(
-            "Ingrese el aparato a editar\n"+
-            "1.-Maquina\n"+
-            "2.-Equipo"
+            "Ingrese el aparato a editar:\n"+
+            "1.- Maquina\n"+
+            "2.- Equipo"
         );
     }
     public void editarOpcion() {
         System.out.println(
         "¿Qué desea editar?\n"+
-        "1. Nombre\n"+
-        "2. Estatus");
+        "1.- Nombre\n"+
+        "2.- Estatus");
     }
     public void editarEstatus() {
         System.out.println(
         "Seleccione el nuevo estatus:\n"+
-        "1.-FUNCIONA :) \n"+
-        "2.-NO FUNCIONA :( "
+        "1.- FUNCIONA :) \n"+
+        "2.- NO FUNCIONA :( "
         );
     }
 
     public void menuEliminarAparato(){
         System.out.println(
             "¿Qué desea eliminar?\n"+
-            "1.-Máquinas\n"+
-            "2.-Equipo"
+            "1.- Máquinas\n"+
+            "2.- Equipo"
         );
     }
 }

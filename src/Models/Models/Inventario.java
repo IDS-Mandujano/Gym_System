@@ -196,8 +196,9 @@ public class Inventario {
     }
 
     public void editarMaquina() {
-        String listaTipo[] = {"0", "Sección de Cardio", "Sección de Piernas", "Sección de Brazos", "Sección de Espalda", "Sección de Hombros", "Sección de Abdominales", "Sección de pechos"};
+        String listaTipo[] = {"0", "Sección de Cardio","Sección de Piernas", "Sección de Brazos", "Sección de Espalda", "Sección de Hombros", "Sección de Abdominales", "Sección de pechos"};
         String listaStatus[] = {"0", "FUNCIONA :) ", "NO FUNCIONA :( "};
+        @SuppressWarnings("resource")
         Scanner read = new Scanner(System.in);
         Messages msm = new Messages();
         Menus menu = new Menus();
@@ -261,6 +262,7 @@ public class Inventario {
     public void editarEquipo() {
         String listaSeccion[] = {"0", "Mancuerna", "Disco", "Barras"};
         String listaStatus[] = {"0", "FUNCIONA :) ", "NO FUNCIONA :( "};
+        @SuppressWarnings("resource")
         Scanner read = new Scanner(System.in);
         Menus menu = new Menus();
         Messages msm = new Messages();
@@ -352,7 +354,6 @@ public class Inventario {
         }while(opc == 1 );
     }
     public void eliminarMaquinas(){
-        Menus menu = new Menus();
         Messages msm = new Messages();
         Excepciones exs = new Excepciones();
         boolean encontrada = false;
@@ -375,7 +376,6 @@ public class Inventario {
         }
     }
     public void eliminarEquipo(){
-        Menus menu = new Menus();
         Messages msm = new Messages();
         Excepciones exs = new Excepciones();
         boolean encontrada = false;

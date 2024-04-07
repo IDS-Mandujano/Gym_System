@@ -290,7 +290,7 @@ public class Gerente extends Usuario {
 
 ///////////////////////////////////////////////////////////////////////////77
     public void editarApellido(){
-     Scanner read = new Scanner(System.in);
+    Scanner read = new Scanner(System.in);
     List<Cliente> listaClientes = Cliente.getListaClientes();
     Messages msm = new Messages();
     Excepciones exs = new Excepciones();

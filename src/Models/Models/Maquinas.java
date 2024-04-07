@@ -37,7 +37,6 @@ public class Maquinas extends Aparatos {
         do {
             menu.menuMaquinas();
             tipo = exs.validarDatoEntrada();
-            //CAMBIO DE DO-WHILE A WHILE
             while (tipo<=0||tipo>7) {
                 msm.mensageErrorRango();
                 tipo = exs.validarDatoEntrada();
@@ -47,11 +46,9 @@ public class Maquinas extends Aparatos {
             nombre = read.next();
             read.nextLine();
 
-            //Menu desde la clase Menus
             menu.statusInventario();
             estatus = exs.validarDatoEntrada();
             
-                //CAMBIO DE DO-WHILE A WHILE
             while (estatus <= 0 || estatus > 2){
                 msm.mensageErrorRango();
                 opc = exs.validarDatoEntrada();
@@ -64,7 +61,6 @@ public class Maquinas extends Aparatos {
             System.out.println("¿Desea agregar otra máquina?\n1.- Si\n2.- No");
             opc = exs.validarDatoEntrada();
 
-            //CAMBIO DE DO-WHILE A WHILE
              while (opc <= 0 || opc > 2){
                 msm.mensageErrorRango();
                 opc = exs.validarDatoEntrada();

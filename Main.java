@@ -10,7 +10,6 @@ public class Main {
 
     public static void main(String[] args) {
         Usuario user = new Usuario();
-        verMenuCliente();
         validarOpcion(user);
     }
 
@@ -211,7 +210,7 @@ public class Main {
                     opc = exs.validarDatoEntrada();
                 }
                 validarOpcionAgregarInventario(opc);
-        } while (opc != 6);
+        } while (opc != 3);
     }
 
     public static void validarOpcionAgregarInventario(int opc){
