@@ -257,6 +257,7 @@ public class Gerente extends Usuario {
     }
 
    public void editarNombre(){
+    @SuppressWarnings("resource")
     Scanner read = new Scanner(System.in);
     List<Cliente> listaClientes = Cliente.getListaClientes();
     Messages msm = new Messages();
@@ -288,8 +289,8 @@ public class Gerente extends Usuario {
 
     }
 
-///////////////////////////////////////////////////////////////////////////77
     public void editarApellido(){
+    @SuppressWarnings("resource")
     Scanner read = new Scanner(System.in);
     List<Cliente> listaClientes = Cliente.getListaClientes();
     Messages msm = new Messages();
