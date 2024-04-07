@@ -61,8 +61,8 @@ public class Maquinas extends Aparatos {
             Maquinas maquina = new Maquinas(nombre, estatus, tipo, Aparatos.getUltimoId());
             inventario.setListaMaquinas(maquina);
 
-            System.out.println("Maquina agregada correctamente");
-            System.out.println("¿Desea agregar otra maquina?\n1.- Si\n2.- No");
+            System.out.println("Máquina agregada correctamente");
+            System.out.println("¿Desea agregar otra máquina?\n1.- Si\n2.- No");
             opc = exs.validarDatoEntrada();
 
             //CAMBIO DE DO-WHILE A WHILE

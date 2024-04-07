@@ -34,7 +34,7 @@ public class Menus {
 
     public void opcionesCliente(){
         System.out.println(
-            "Que deseas editar?\n"+
+            "¿Qué deseas editar?\n"+
             "1.- Nombre\n"+
             "2.- Apellido\n"+
             "3.- Mensualidad\n"+
@@ -52,7 +52,7 @@ public class Menus {
     }
     public void menuAgregarAparatos(){
         System.out.println(
-            "1.-Agregar Maquinas\n"+
+            "1.-Agregar Máquinas\n"+
             "2.-Agregar Equipo\n"+
             "3.-Salir"
         );
@@ -60,13 +60,13 @@ public class Menus {
 
     public void menuMaquinas(){
         System.out.println("Tipo de maquina:\n" +
-                    "1.-Maquina de Cardio\n" +
-                    "2.-Maquina de Piernas\n" +
-                    "3.-Maquina de Brazos\n" +
-                    "4.-Maquina de Espalda\n" +
-                    "5.-Maquina de Hombros\n" +
-                    "6.-Maquina de Abdominales\n" +
-                    "7.-Maquina de pechos"
+                    "1.-Máquina de Cardio\n" +
+                    "2.-Máquina de Piernas\n" +
+                    "3.-Máquina de Brazos\n" +
+                    "4.-Máquina de Espalda\n" +
+                    "5.-Máquina de Hombros\n" +
+                    "6.-Máquina de Abdominales\n" +
+                    "7.-Máquina de pecho"
             );
     }
 
@@ -80,21 +80,21 @@ public class Menus {
         System.out.println("Ingrese la seccion de Equipo:\n" +
                     "1.-Mancuerna\n" +
                     "2.-Disco\n" +
-                    "3.-Barras"
+                    "3.-Barra"
             );
     }
 
     public void menuBusquedaAparato(){
         System.out.println(
             "Ingrese el tipo de aparato a buscar\n"+
-            "1.-Maquinas\n"+
+            "1.-Maquina\n"+
             "2.-Equipo"
         );
     }
     public void menuEditarAparato(){
         System.out.println(
             "Ingrese el aparato a editar\n"+
-            "1.-Maquinas\n"+
+            "1.-Maquina\n"+
             "2.-Equipo"
         );
     }
@@ -114,8 +114,8 @@ public class Menus {
 
     public void menuEliminarAparato(){
         System.out.println(
-            "¿Que desea eliminar?\n"+
-            "1.-Maquinas\n"+
+            "¿Qué desea eliminar?\n"+
+            "1.-Máquinas\n"+
             "2.-Equipo"
         );
     }

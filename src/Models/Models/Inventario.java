@@ -33,11 +33,11 @@ public class Inventario {
     }
 
     public void verInventario() {
-        String listaTipo [] = {"0","Sección de Cardio","Sección de Piernas","Sección de Brazos","Sección de Espalda","Sección de Hombros","Seccion de Abdominales","Seccion de pechos"};
+        String listaTipo [] = {"0","Sección de Cardio","Sección de Piernas","Sección de Brazos","Sección de Espalda","Sección de Hombros","Sección de Abdominales","Sección de pechos"};
         String listaStatus[] = {"0","FUNCIONA :) ","NO FUNCIONA :( "};
         String listaSeccion [] = { "0","Mancuerna","Disco","Barras"};
         Messages msm = new Messages();
-        System.out.println("Maquinas en inventario:");
+        System.out.println("Máquinas en inventario:");
         if (listaMaquinas.size() == 0) {
             System.out.println("No hay máquinas en el inventario.");
         } else {
@@ -105,7 +105,7 @@ public class Inventario {
     }
 
     public void verMaquinaPorId() {
-        String listaTipo[] = {"0", "Sección de Cardio", "Sección de Piernas", "Sección de Brazos", "Sección de Espalda", "Sección de Hombros", "Seccion de Abdominales", "Seccion de pechos"};
+        String listaTipo[] = {"0", "Sección de Cardio", "Sección de Piernas", "Sección de Brazos", "Sección de Espalda", "Sección de Hombros", "Sección de Abdominales", "Sección de pechos"};
         String listaStatus[] = {"0", "FUNCIONA :) ", "NO FUNCIONA :( "};
         Messages msm = new Messages();
         Excepciones exs = new Excepciones();
@@ -196,7 +196,7 @@ public class Inventario {
     }
 
     public void editarMaquina() {
-        String listaTipo[] = {"0", "Sección de Cardio", "Sección de Piernas", "Sección de Brazos", "Sección de Espalda", "Sección de Hombros", "Seccion de Abdominales", "Seccion de pechos"};
+        String listaTipo[] = {"0", "Sección de Cardio", "Sección de Piernas", "Sección de Brazos", "Sección de Espalda", "Sección de Hombros", "Sección de Abdominales", "Sección de pechos"};
         String listaStatus[] = {"0", "FUNCIONA :) ", "NO FUNCIONA :( "};
         Scanner read = new Scanner(System.in);
         Messages msm = new Messages();

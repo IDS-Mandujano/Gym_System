@@ -136,7 +136,6 @@ public class Gerente extends Usuario {
                 switch (opc) {
                     case 1:
                         editarNombre();
-                        
                         break;
                     case 2:
                         editarApellido();
@@ -279,8 +278,9 @@ public class Gerente extends Usuario {
                 Cliente nuevoCliente = new Cliente(nuevoNombre, listaClientes.get(i).getApellido());
                 nuevoCliente.setId(listaClientes.get(i).getId()); 
                 listaClientes.set(i, nuevoCliente);
-            }
-            
+                System.out.println("Nombre actualizado");
+            } else {System.out.println("Operacion cancelada el nombre no fue cambiado");}
+            break;
         }
 
     }
@@ -312,7 +312,8 @@ public class Gerente extends Usuario {
                 Cliente nuevoCliente = new Cliente( listaClientes.get(i).getNombre(),nuevoApellido );
                 nuevoCliente.setId(listaClientes.get(i).getId()); 
                 listaClientes.set(i, nuevoCliente);
-            }
+                System.out.println("Apellido actualizado");
+            } else { System.out.println("Operacion cancelada el apellido no fue cambiado");}
             
         }
 
