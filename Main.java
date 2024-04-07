@@ -182,12 +182,12 @@ public class Main {
                 break;
             case 4:
                 msm.separador();
-                a.editarInventario();
+                a.editarEstatusAparatos();
                 msm.separador();
                 break;
             case 5:
                 msm.separador();
-                a.eliminarInventario();
+                a.eliminarAparatos();
                 msm.separador();
                 break;
             case 6:

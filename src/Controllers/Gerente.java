@@ -139,7 +139,7 @@ public class Gerente extends Usuario {
                         
                         break;
                     case 2:
-                        System.out.println("aca es editar apellido");
+                        editarApellido();
                         break;
                     case 3:
                         editarMensualidad();
@@ -191,7 +191,7 @@ public class Gerente extends Usuario {
         String fechaInicio,fechaFinal,tipoPlan;
 
         do {
-            System.out.println("Elija su Plan");
+            System.out.println("Elija su Plan.");
             for(int i=0;i<listaPlan.length;i++){
                 System.out.println(i+1+".- "+listaPlan[i]+" $"+montoPlan[i]);
             }
@@ -239,7 +239,7 @@ public class Gerente extends Usuario {
 
         for (int i = 0; i < listaClientes.size(); i++) {
             if (idCliente == listaClientes.get(i).getId()) {
-                System.out.println("¿Desea editar este plan? \n1.- Si\n2.- No");
+                System.out.println("¿Desea editar este plan?\n1.- Si\n2.- No");
                 int opc = exs.validarDatoEntrada();
                 while (opc<=0||opc>2) {
                     msm.mensageErrorRango();
@@ -257,8 +257,8 @@ public class Gerente extends Usuario {
         }
     }
 
-    public void editarNombre(){
-         Scanner read = new Scanner(System.in);
+   public void editarNombre(){
+    Scanner read = new Scanner(System.in);
     List<Cliente> listaClientes = Cliente.getListaClientes();
     Messages msm = new Messages();
     Excepciones exs = new Excepciones();
@@ -267,17 +267,18 @@ public class Gerente extends Usuario {
     for(int i = 0;i<listaClientes.size(); i++ ){
         if (idCliente==listaClientes.get(i).getId()) {
             System.out.println("¿Desea editar el nombre?");
+            System.out.println("1._ Si \n2._ No");
             int opc = exs.validarDatoEntrada();
             while (opc <=0 || opc> 2) {
                 msm.mensageErrorRango();
                 opc = exs.validarDatoEntrada();
             }
             if (opc == 1) {
-                 listaClientes.remove(i);
-                System.out.println("ingrese el nuevo nombre");
+                System.out.println("Ingrese el nuevo nombre.");
                 String nuevoNombre = read.nextLine();
-                listaClientes.get(i).setNombre(nuevoNombre);
-                System.out.println("nombre actualizado");
+                Cliente nuevoCliente = new Cliente(nuevoNombre, listaClientes.get(i).getApellido());
+                nuevoCliente.setId(listaClientes.get(i).getId()); 
+                listaClientes.set(i, nuevoCliente);
             }
             
         }
@@ -289,6 +290,7 @@ public class Gerente extends Usuario {
 
 ///////////////////////////////////////////////////////////////////////////77
     public void editarApellido(){
+     Scanner read = new Scanner(System.in);
     List<Cliente> listaClientes = Cliente.getListaClientes();
     Messages msm = new Messages();
     Excepciones exs = new Excepciones();
@@ -297,13 +299,26 @@ public class Gerente extends Usuario {
 
     for(int i = 0;i<listaClientes.size(); i++ ){
         if (idCliente==listaClientes.get(i).getId()) {
+            System.out.println("¿Desea editar el apellido?");
+            System.out.println("1._ Si\n2._ No");
+            int opc = exs.validarDatoEntrada();
+            while (opc <=0 || opc> 2) {
+                msm.mensageErrorRango();
+                opc = exs.validarDatoEntrada();
+            }
+            if (opc == 1) {
+                System.out.println("ingrese el nuevo apellido");
+                String nuevoApellido = read.nextLine();
+                Cliente nuevoCliente = new Cliente( listaClientes.get(i).getNombre(),nuevoApellido );
+                nuevoCliente.setId(listaClientes.get(i).getId()); 
+                listaClientes.set(i, nuevoCliente);
+            }
             
         }
 
 
     }
-
-
-    }
+}
 
 }
+
