@@ -272,7 +272,7 @@ public class Inventario {
         idBuscar = exs.validarDatoEntrada();
         while (idBuscar <= 0) {
             msm.mensageErrorRango();
-            idBuscar = exs.validarDatoEntrada();
+            idBuscar = exs.validarDatoEntrada();   
         }
     
         for (int i = 0; i < listaEquipos.size(); i++) {

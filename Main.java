@@ -9,10 +9,9 @@ import utils.*;
 public class Main {
 
     public static void main(String[] args) {
-        //Usuario user = new Usuario();
-        /*verMenuCliente();
-        validarOpcion(user);*/
-        verMenuGerente();
+        Usuario user = new Usuario();
+        verMenuCliente();
+        validarOpcion(user);
     }
 
     public static void validarOpcion(Usuario user){
@@ -231,7 +230,6 @@ public class Main {
                 msm.mensajeSalida(); 
                 msm.separador();
                 verMenuInventario();
-
                 break;
         }
     }

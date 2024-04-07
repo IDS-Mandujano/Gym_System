@@ -35,7 +35,6 @@ public class Maquinas extends Aparatos {
         int opc = 0;
 
         do {
-            //Menu desde la clase Menus
             menu.menuMaquinas();
             tipo = exs.validarDatoEntrada();
             //CAMBIO DE DO-WHILE A WHILE

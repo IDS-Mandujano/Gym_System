@@ -45,10 +45,8 @@ public class Equipo extends Aparatos {
         int opc = 0;
 
         do {
-            //Menu desde la clase Menus
             menu.menuEquipo();
             seccion = exs.validarDatoEntrada();
-            //CAMBIO DE DO-WHILE A WHILE
             while (seccion<=0||seccion>3) {
                 msm.mensageErrorRango();
                 seccion = exs.validarDatoEntrada();
