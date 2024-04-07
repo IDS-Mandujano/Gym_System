@@ -3,6 +3,8 @@ package utils;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import Controllers.Usuario;
+
 public class Excepciones {
     
     public int validarDatoEntrada() {
@@ -24,4 +26,20 @@ public class Excepciones {
 
         return num;
     }
+
+    public String validarNull() {
+        Usuario user = new Usuario();
+        String rol = null;
+    
+        do {
+            rol = user.iniciarSesion();
+            if (rol != null) {
+                return rol;
+            } else {
+                System.out.println("Ingrese credenciales válidas");
+            }
+        } while (true);
+    }
+    
+
 }

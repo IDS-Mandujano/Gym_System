@@ -1,5 +1,4 @@
 import Controllers.Gerente;
-import Controllers.Usuario;
 import Models.Equipo;
 import Models.Inventario;
 import Models.Maquinas;
@@ -9,18 +8,17 @@ import utils.*;
 public class Main {
 
     public static void main(String[] args) {
-        Usuario user = new Usuario();
-        validarOpcion(user);
+        validarOpcion();
     }
 
-    public static void validarOpcion(Usuario user){
+    public static void validarOpcion(){
         Messages msm = new Messages();
         Menus menu = new Menus();
         Excepciones exs = new Excepciones();
 
         int opc;
 
-        do {
+    do {
         menu.menuPrincipal();
         opc = exs.validarDatoEntrada();
         while (opc<=0||opc>2) {
@@ -30,7 +28,7 @@ public class Main {
 
         switch (opc) {
             case 1:
-                validarRol(user.iniciarSesion());
+                validarRol(exs.validarNull());
                 break;
             case 2:
                 msm.mensajeSalida();
@@ -63,7 +61,7 @@ public class Main {
                 msm.mensageErrorRango();
                 opc = exs.validarDatoEntrada();
             }
-        } while (opc!=4);
+        } while (opc!=3);
         
     }
 
