@@ -1,5 +1,3 @@
-import org.xml.sax.SAXException;
-
 import Controllers.Administrador;
 import Controllers.Gerente;
 import Models.Equipo;
