@@ -209,20 +209,24 @@ public class Main {
 
     public static void validarOpcionAgregarInventario(int opc){
         Messages msm = new Messages();
+        Equipo e = new Equipo();  
+        Maquinas m = new Maquinas();
+
         switch (opc) {
             case 1:
-                Maquinas m = new Maquinas();
+                msm.separador();
                 m.agregarAparatos();
+                msm.separador();
                 break;
             case 2:
-                Equipo e = new Equipo();
+                msm.separador();
                 e.agregarAparatos();
+                msm.separador();
                 break;
             case 3:
                 msm.separador();
                 msm.mensajeSalida(); 
                 msm.separador();
-                verMenuInventario();
                 break;
         }
     }
