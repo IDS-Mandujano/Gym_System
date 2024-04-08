@@ -59,6 +59,11 @@ public class Equipo extends Aparatos {
             System.out.println("Peso del equipo a agregar (kg)");
             peso = exs.validarDatoEntrada();
 
+            while (peso<=0 || peso>50) {
+                peso = exs.validarDatoEntrada();
+                msm.mensajePeso();
+            }
+
             //Menu desde la clase Menus
             menu.statusInventario();
             estatus = exs.validarDatoEntrada();

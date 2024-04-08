@@ -17,4 +17,5 @@ public class Messages {
     public void nuevoNombre() {System.out.print("Ingrese el nuevo nombre: ");}
     public void idMaquinaEliminar(){System.out.println("Ingrese el id de la maquina a eliminar");}
     public void idEquipoEliminar(){System.out.println("Ingrese el id del equipo a elimiar");}
+    public void mensajePeso(){System.out.println("Ingrese un peso dentro del rango");}
 }
