@@ -16,5 +16,5 @@ public class Messages {
     public void editarMaquinaNombre(){System.out.println("Ingrese el nombre nuevo");}
     public void nuevoNombre() {System.out.print("Ingrese el nuevo nombre: ");}
     public void idMaquinaEliminar(){System.out.println("Ingrese el id de la maquina a eliminar");}
-    public void idEquipoEliminar(){System.out.println("Ingrse el i del equipo a elimiar");}
+    public void idEquipoEliminar(){System.out.println("Ingrese el id del equipo a elimiar");}
 }

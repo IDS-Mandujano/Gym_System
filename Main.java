@@ -1,8 +1,5 @@
-import Controllers.Administrador;
-import Controllers.Gerente;
-import Models.Equipo;
-import Models.Inventario;
-import Models.Maquinas;
+import Controllers.*;
+import Models.*;
 import utils.*;
 
 

@@ -10,6 +10,7 @@ public class Menus {
     
     public void menuPrincipalGerente(){
         System.out.println(
+            "¿A que seccion desea ingresar? \n"+
             "1.- Cliente\n"+
             "2.- Inventario\n"+
             "3.- Cerrar sesión");
@@ -18,7 +19,7 @@ public class Menus {
     public void menuCliente(){
         System.out.println(
             "1.- Agregar cliente\n"+
-            "2.- Ver cliente por ID\n"+
+            "2.- Buscar cliente por ID\n"+
             "3.- Ver clientes existentes\n"+
             "4.- Editar cliente\n"+
             "5.- Eliminar cliente\n"+
@@ -36,7 +37,7 @@ public class Menus {
     public void menuInventario(){
         System.out.println(
             "1.- Agregar aparatos al inventario\n"+
-            "2.- Ver Inventario por tipo de aparatos.\n"+
+            "2.- Buscar aparato por id\n"+
             "3.- Ver inventario existente\n"+
             "4.- Editar inventario\n"+
             "5.- Eliminar Aparatos\n"+
@@ -124,7 +125,7 @@ public class Menus {
         System.out.println(
             "¿Que desea realizar?\n"+
             "1.- Ver clientes existentes.\n"+
-            "2.- Ver cliente por ID.\n"+
+            "2.- Buscar cliente por ID.\n"+
             "3.- Salir.");
     }
 
