@@ -1,3 +1,6 @@
+import org.xml.sax.SAXException;
+
+import Controllers.Administrador;
 import Controllers.Gerente;
 import Models.Equipo;
 import Models.Inventario;
@@ -281,6 +284,7 @@ public class Main {
                 msm.mensageErrorRango();
                 opc = exs.validarDatoEntrada();
             }
+            validarMenuClienteAdmin(opc);
         }while(opc!=3);
     }
 
@@ -297,6 +301,49 @@ public class Main {
                 msm.mensageErrorRango();
                 opc = exs.validarDatoEntrada();
             }
+            validarMenuInventarioAdmin(opc);
         }while(opc!=3);
+    }
+
+    public static void validarMenuClienteAdmin(int opc){
+        Administrador admin = new Administrador();
+        Messages msm = new Messages();
+
+        switch (opc) {
+            case 1:
+                msm.separador();
+                admin.verClientes();
+                msm.separador();
+                break;
+            case 2:
+                msm.separador();
+                admin.verClientePorID();
+                msm.separador();
+                break;
+            case 3:
+                msm.mensajeSalida();
+                break;
+        }
+    }
+
+    public static void validarMenuInventarioAdmin(int opc){
+        Administrador admin = new Administrador();
+        Messages msm = new Messages();
+
+        switch (opc) {
+            case 1:
+                msm.separador();
+                admin.verInventario();
+                msm.separador();
+                break;
+            case 2:
+                msm.separador();
+                admin.buscarAparatos();
+                msm.separador();
+                break;
+            case 3:
+                msm.mensajeSalida();
+                break;
+        }
     }
 }

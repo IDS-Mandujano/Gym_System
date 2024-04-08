@@ -18,19 +18,20 @@ public class Inventario {
         return instancia;
     }
 
-    public ArrayList<Maquinas> getListaMaquinas() {
+    public static ArrayList<Maquinas> getListaMaquinas() {
         return listaMaquinas;
     }
     public void setListaMaquinas(Maquinas maquinas) {
         listaMaquinas.add(maquinas);
     }
 
-    public ArrayList<Equipo> getListaEquipos() {
+    public static ArrayList<Equipo> getListaEquipos() {
         return listaEquipos;
     }
     public void setListaEquipos(Equipo equipo) {
         listaEquipos.add(equipo);
     }
+
 
     public void verInventario() {
         String listaTipo [] = {"0","Sección de Cardio","Sección de Piernas","Sección de Brazos","Sección de Espalda","Sección de Hombros","Sección de Abdominales","Sección de pechos"};
