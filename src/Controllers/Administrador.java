@@ -10,7 +10,7 @@ public class Administrador extends Usuario{
 
     public Administrador(){
         this.user = "Lizeth.egordillo";
-        this.pass = "Estrada@24";
+        this.pass = "admin123";
     }
 
     public String getUser() {

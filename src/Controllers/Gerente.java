@@ -14,7 +14,7 @@ public class Gerente extends Usuario {
 
     public Gerente() {
         this.user = "Victor.escobarb";
-        this.pass = "Bonilla$24";
+        this.pass = "gerente$123";
     }
 
     public String getRol() {
