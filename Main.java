@@ -6,7 +6,8 @@ import utils.*;
 public class Main {
 
     public static void main(String[] args) {
-        validarOpcion();
+        //validarOpcion();
+        verMenuGerente();
     }
 
     public static void validarOpcion(){
@@ -54,11 +55,11 @@ public class Main {
             msm.separador();
             menu.menuPrincipalGerente();
             opc = exs.validarDatoEntrada();
-            validarOpcion(opc);
             while (opc <=0 || opc >3) {
                 msm.mensageErrorRango();
                 opc = exs.validarDatoEntrada();
             }
+            validarOpcion(opc);
         } while (opc!=3);
         
     }

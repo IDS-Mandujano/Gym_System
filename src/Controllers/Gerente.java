@@ -32,7 +32,7 @@ public class Gerente extends Usuario {
         System.out.print("Nombre: ");
         String nombre = read.next();
 
-        System.out.print("Apellido (P o M): ");
+        System.out.print("Apellido (Paterno o Materno): ");
         String apellido = read.next();
 
         Cliente cliente = new Cliente(nombre,apellido);
@@ -63,6 +63,10 @@ public class Gerente extends Usuario {
         List<Plan> listaPlanes = Cliente.getPlanCliente();
         boolean encontrado = false;
             int idCliente = exs.validarDatoEntrada();
+            while (idCliente<=0) {
+                msm.mensageErrorRango();
+                idCliente = exs.validarDatoEntrada();
+            }
 
             for(int i=0;i<listaClientes.size();i++){
                 Cliente cliente = listaClientes.get(i);
