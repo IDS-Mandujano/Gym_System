@@ -102,25 +102,31 @@ public class Gerente extends Usuario {
         Messages msm = new Messages();
         List<Cliente> listaClientes = Cliente.getListaClientes();
         List<Plan> listaPlanes = Cliente.getPlanCliente();
-    
-        for (int i = 0; i < listaClientes.size(); i++) {
-            Cliente cliente = listaClientes.get(i);
-            Plan plan = listaPlanes.get(i);
-        
-            msm.separador();
-            System.out.println(
-                "ID-Cliente: "+cliente.getId()+
-                "\nNombre: "+cliente.getNombre()+
-                "\nApellido: "+cliente.getApellido()
-                );
-            System.out.println("------- [PLAN] -------");
-            System.out.println(
-                "Tipo de Plan: "+plan.getTipoPlan()+
-                "\nFecha de inicio: "+plan.getFechaInicio()+
-                "\nFecha de termino: "+plan.getFechaFinal()+
-                "\nMonto: $"+plan.getMonto());
-            msm.separador();
+
+        if (listaClientes.size()>0) {
+            for (int i = 0; i < listaClientes.size(); i++) {
+                Cliente cliente = listaClientes.get(i);
+                Plan plan = listaPlanes.get(i);
+            
+                msm.separador();
+                System.out.println(
+                    "ID-Cliente: "+cliente.getId()+
+                    "\nNombre: "+cliente.getNombre()+
+                    "\nApellido: "+cliente.getApellido()
+                    );
+                System.out.println("------- [PLAN] -------");
+                System.out.println(
+                    "Tipo de Plan: "+plan.getTipoPlan()+
+                    "\nFecha de inicio: "+plan.getFechaInicio()+
+                    "\nFecha de termino: "+plan.getFechaFinal()+
+                    "\nMonto: $"+plan.getMonto());
+                msm.separador();
+            }
+        }else{
+            msm.mensajeNotFound();
         }
+    
+
     }
 
     public void editarCliente(){
