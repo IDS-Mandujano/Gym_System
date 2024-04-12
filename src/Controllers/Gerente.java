@@ -267,71 +267,63 @@ public class Gerente extends Usuario {
         }
     }
 
-   public void editarNombre(){
-    @SuppressWarnings("resource")
-    Scanner read = new Scanner(System.in);
-    List<Cliente> listaClientes = Cliente.getListaClientes();
-    Messages msm = new Messages();
-    Excepciones exs = new Excepciones();
-    msm.editar();
-    int idCliente = buscarCliente();
-    for(int i = 0;i<listaClientes.size(); i++ ){
-        if (idCliente==listaClientes.get(i).getId()) {
-            System.out.println("¿Desea editar el nombre?");
-            System.out.println("1._ Si \n2._ No");
-            int opc = exs.validarDatoEntrada();
-            while (opc <=0 || opc> 2) {
-                msm.mensageErrorRango();
-                opc = exs.validarDatoEntrada();
+    public void editarNombre(){
+        @SuppressWarnings("resource")
+        Scanner read = new Scanner(System.in);
+        List<Cliente> listaClientes = Cliente.getListaClientes();
+        Messages msm = new Messages();
+        Excepciones exs = new Excepciones();
+        msm.editar();
+        int idCliente = buscarCliente();
+        for(int i = 0;i<listaClientes.size(); i++ ){
+            if (idCliente==listaClientes.get(i).getId()) {
+                System.out.println("¿Desea editar el nombre?");
+                System.out.println("1. Si \n2. No");
+                int opc = exs.validarDatoEntrada();
+                while (opc <=0 || opc> 2) {
+                    msm.mensageErrorRango();
+                    opc = exs.validarDatoEntrada();
+                }
+                if (opc == 1) {
+                    System.out.println("Ingrese el nuevo nombre.");
+                    String nuevoNombre = read.nextLine();
+                    listaClientes.get(i).setNombre(nuevoNombre);
+                    System.out.println("Nombre actualizado");
+                } else {System.out.println("Operacion cancelada el nombre no fue cambiado");}
+                break;
             }
-            if (opc == 1) {
-                System.out.println("Ingrese el nuevo nombre.");
-                String nuevoNombre = read.nextLine();
-                Cliente nuevoCliente = new Cliente(nuevoNombre, listaClientes.get(i).getApellido());
-                nuevoCliente.setId(listaClientes.get(i).getId()); 
-                listaClientes.set(i, nuevoCliente);
-                System.out.println("Nombre actualizado");
-            } else {System.out.println("Operacion cancelada el nombre no fue cambiado");}
-            break;
+
         }
-
-    }
-
-
     }
 
     public void editarApellido(){
-    @SuppressWarnings("resource")
-    Scanner read = new Scanner(System.in);
-    List<Cliente> listaClientes = Cliente.getListaClientes();
-    Messages msm = new Messages();
-    Excepciones exs = new Excepciones();
-    msm.editar();
-    int idCliente = buscarCliente();
+        @SuppressWarnings("resource")
+        Scanner read = new Scanner(System.in);
+        List<Cliente> listaClientes = Cliente.getListaClientes();
+        Messages msm = new Messages();
+        Excepciones exs = new Excepciones();
+        msm.editar();
+        int idCliente = buscarCliente();
 
-    for(int i = 0;i<listaClientes.size(); i++ ){
-        if (idCliente==listaClientes.get(i).getId()) {
-            System.out.println("¿Desea editar el apellido?");
-            System.out.println("1._ Si\n2._ No");
-            int opc = exs.validarDatoEntrada();
-            while (opc <=0 || opc> 2) {
-                msm.mensageErrorRango();
-                opc = exs.validarDatoEntrada();
+        for(int i = 0;i<listaClientes.size(); i++ ){
+            if (idCliente==listaClientes.get(i).getId()) {
+                System.out.println("¿Desea editar el apellido?");
+                System.out.println("1. Si\n2. No");
+                int opc = exs.validarDatoEntrada();
+                while (opc <=0 || opc> 2) {
+                    msm.mensageErrorRango();
+                    opc = exs.validarDatoEntrada();
+                }
+                if (opc == 1) {
+                    System.out.println("ingrese el nuevo apellido");
+                    String nuevoApellido = read.nextLine();
+                    listaClientes.get(i).setApellido(nuevoApellido);
+                    System.out.println("Apellido actualizado");
+                } else { System.out.println("Operacion cancelada el apellido no fue cambiado");}
+
             }
-            if (opc == 1) {
-                System.out.println("ingrese el nuevo apellido");
-                String nuevoApellido = read.nextLine();
-                Cliente nuevoCliente = new Cliente( listaClientes.get(i).getNombre(),nuevoApellido );
-                nuevoCliente.setId(listaClientes.get(i).getId()); 
-                listaClientes.set(i, nuevoCliente);
-                System.out.println("Apellido actualizado");
-            } else { System.out.println("Operacion cancelada el apellido no fue cambiado");}
-            
         }
-
-
     }
-}
 
 }
 
