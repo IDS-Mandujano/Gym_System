@@ -49,7 +49,7 @@ public class Maquinas extends Aparatos {
             
             while (estatus <= 0 || estatus > 2){
                 msm.mensageErrorRango();
-                opc = exs.validarDatoEntrada();
+                estatus = exs.validarDatoEntrada();
             }
 
             Maquinas maquina = new Maquinas(nombre, estatus, tipo, Aparatos.getUltimoId());
