@@ -1,9 +1,7 @@
 package Models;
 
 import java.util.Scanner;
-import utils.Excepciones;
-import utils.Menus;
-import utils.Messages;
+import utils.*;
 
 public class Maquinas extends Aparatos {
 

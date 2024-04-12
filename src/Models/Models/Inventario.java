@@ -1,10 +1,8 @@
 package Models;
 import java.util.ArrayList;
 import java.util.Scanner;
+import utils.*;
 
-import utils.Excepciones;
-import utils.Menus;
-import utils.Messages;
 public class Inventario {
     private static Inventario instancia = null;
     private static ArrayList<Maquinas> listaMaquinas = new ArrayList<>();
