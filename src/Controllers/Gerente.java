@@ -62,6 +62,12 @@ public class Gerente extends Usuario {
         List<Cliente> listaClientes = Cliente.getListaClientes();
         List<Plan> listaPlanes = Cliente.getPlanCliente();
         boolean encontrado = false;
+        int opc = 0;
+
+        do{
+            if (opc==1) {
+                System.out.println("Ingrese el ID");
+            }
             int idCliente = exs.validarDatoEntrada();
             while (idCliente<=0) {
                 msm.mensageErrorRango();
@@ -88,12 +94,21 @@ public class Gerente extends Usuario {
             }
         }
 
-        if (encontrado) {
-            return idCliente;
-        }
-        if (!encontrado) {
-            System.out.println("Cliente no encontrado.");
-        }
+            if (encontrado) {
+                return idCliente;
+            }
+            if (!encontrado) {
+                System.out.println("Cliente no encontrado.");
+            }
+            System.out.println("Desea buscar otro cliente?\n1.- Si\n2.- No");
+            opc = exs.validarDatoEntrada();
+
+            while (opc<=0||opc>2) {
+                msm.mensageErrorRango();
+                opc = exs.validarDatoEntrada();
+            }
+
+        }while(!encontrado&&opc!=2);
         return 0;
     }
     
