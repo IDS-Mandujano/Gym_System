@@ -154,6 +154,7 @@ public class Gerente extends Usuario {
                         editarMensualidad();
                         break;
                     case 4:
+                        msm.mensajeSalida();
                         break;
                 }
             } while (opc!=4);
