@@ -19,7 +19,7 @@ public class Messages {
     public void idEquipoEliminar(){System.out.println("Ingrese el id del equipo a elimiar");}
     public void mensajePeso(){System.out.println("Ingrese un peso dentro del rango");}
     public void mensajeNotFound(){System.out.println(
-        "Cliente no encontrado\n"+
+        "Clientes no registrados\n"+
         "Favor de ingresar un cliente nuevo");
     }
 }
